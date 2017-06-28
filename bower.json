@@ -1,7 +1,7 @@
 {
   "name": "pmflow",
   "description": "Project Management Suite focused on flexibility and efficiency.",
-  "main": "resources/bin/app.js",
+  "main": "bin/app.js",
   "authors": [
     "Kyle Derby MacInnis"
   ],

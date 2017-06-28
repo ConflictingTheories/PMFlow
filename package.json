@@ -2,9 +2,9 @@
   "name": "pmflow",
   "version": "1.0.0",
   "description": "Project Management Suite focused on flexibility and efficiency.",
-  "main": "resources/bin/app.js",
+  "main": "bin/app.js",
   "scripts": {
-    "start": "node resources/bin/app.js",
+    "start": "node bin/app.js",
     "test": "echo -e \"\\nWARNING: Tests Not Implemented\\n\""
   },
   "repository": {
