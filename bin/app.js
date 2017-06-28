@@ -37,9 +37,13 @@ app.use(bp.urlencoded({
     extended: false
 }));
 
-// HOME PAGE
+// Bower Components
+app.use("/bower", express.static(__dirname + "/../bower_components"));
+// Angular + Scripts
+app.use("/app", express.static(__dirname + "/../public"));
+// Main Page
 app.use("/", (req, res, next) => {
-    res.render("home");
+    res.render("app");
 });
 
 // LISTEN ON PORT

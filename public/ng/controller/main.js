@@ -1,4 +1,3 @@
-<%
 /*                                            *\
 ** ------------------------------------------ **
 **      PMFLOW -- Project Manager Flow        **
@@ -11,12 +10,13 @@
 **           All Rights Reserved.             **
 ** ------------------------------------------ **
 \*                                            */
-%>
-<html>
-<head>
-<title>PMFlow</title>
-</head>
-<body>
-<h2>Coming Soon...</h2>
-</body>
-</html>
+
+(function() {
+    // PMFlow Module
+    ngStoreController('__main__', __main__);
+})();
+
+// Controller Code
+var __main__ = [function($scope) {
+    $scope.test = "hello";
+}];
