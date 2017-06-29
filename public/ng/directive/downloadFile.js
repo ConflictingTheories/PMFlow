@@ -23,8 +23,9 @@
             templateUrl: "/app/ng/view/directives/downloadFile.html",
             scope: true,
             link: function(scope, element, attr) {
-                var downloadBtn = element.children()[0];
-                var clearBtn = element.children()[1];
+                var downloadBtn = element.children()[2];
+                var clearBtn = element.children()[3];
+                var textBox = element.children()[0];
                 // When the download starts, disable the link
                 scope.$on('download-start', function() {
                     $jQ(downloadBtn)
@@ -32,8 +33,10 @@
                 });
                 // When Download
                 scope.$on('downloaded', function(event, data) {
+                    // Geneatre Download
                     var dataBlob = new Blob([data], { type: 'application/octet-stream' });
                     var dataUrl = URL.createObjectURL(dataBlob);
+                    // Modify Link
                     $jQ(downloadBtn).attr({
                             "href": dataUrl,
                             "ng-click": "",
@@ -43,6 +46,8 @@
                         .text('Save')
                         .removeClass('btn-primary')
                         .addClass('btn-success');
+                    $jQ(textBox)
+                        .text(data);
                     // Enable Clear button
                     $jQ(clearBtn)
                         .removeAttr('disabled')

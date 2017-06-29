@@ -49,9 +49,11 @@
     <body ng-app="pmFlow">
         <h1>PMFlow</h1><br/><br/>
         <p ng-controller="main as $ctrl">{{$ctrl.test}}</p>
-        <div drag-n-drop>Drag ME!!</div>
+        <div drag-n-drop class="panel">
+            Drag ME!!<br />
+            <br/>
+            <download-btn url="/app/ng/app.js" filename="app.js"></download-btn>
+        </div>
         <h2>Coming Soon...</h2>
-        <download-btn url="/app/ng/app.js" filename="app.js"></download-btn>
-        <pdf-download url="/app/ng/app.js" filename="my-awesome-app"></pdf-download>
     </body>
 </html>
