@@ -11,11 +11,17 @@
 ** ------------------------------------------ **
 \*                                            */
 
-(function() {
+(function(angular) {
     // PMFlow Module
-    var app = angular.module('PMFlow', ['ui.router']);
-
+    var app = angular.module('pmFlow', ['ui.router']);
+    // Load Services
+    app.service('testService', ngLoadService('testService'));
+    app.factory('testFactory', ngLoadService('testFactory'));
     // Load Controllers
-    app.controller('__main__', ngLoadController('__main__'));
+    app.controller('main', ngLoadController('main'));
+    // Load Directives
+    app.directive('dragNDrop', ngLoadDirective('dragNDrop'));
+    app.directive('downloadBtn', ngLoadDirective('downloadBtn'));
+    // Load Components
 
-})();
+})(window.angular);

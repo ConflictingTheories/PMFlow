@@ -74,15 +74,15 @@ var ngLoadController = function(name) {
     return ngUtil.ngLoad(name, "ctrl");
 };
 // Store Shortcuts
-var ngStoreService = function(name) {
-    return ngUtil.ngStore(name, "serv");
+var ngStoreService = function(name, obj) {
+    return ngUtil.ngStore(name, "serv", obj);
 };
-var ngStoreDirective = function(name) {
-    return ngUtil.ngStore(name, "dir");
+var ngStoreDirective = function(name, obj) {
+    return ngUtil.ngStore(name, "dir", obj);
 };
-var ngStoreComponent = function(name) {
-    return ngUtil.ngStore(name, "comp");
+var ngStoreComponent = function(name, obj) {
+    return ngUtil.ngStore(name, "comp", obj);
 };
-var ngStoreController = function(name) {
-    return ngUtil.ngStore(name, "ctrl");
+var ngStoreController = function(name, obj) {
+    return ngUtil.ngStore(name, "ctrl", obj);
 };

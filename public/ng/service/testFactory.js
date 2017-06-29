@@ -12,14 +12,19 @@
 \*                                            */
 
 
-// Register Controller
+// Register Service
 (function() {
     // Controller Code
-    var mainCtrl = ['$scope', 'testService', 'testFactory', function($scope, testService, testFactory) {
-        this.test = "hello";
-        testService.test();
-        testFactory.test();
+    var testFactory = [function() {
+        console.log("hello");
+        return {
+            // Test Function
+            test: function() {
+                console.log("test");
+                return "test me";
+            }
+        };
     }];
     // PMFlow Module
-    ngStoreController('main', mainCtrl);
+    ngStoreService('testFactory', testFactory);
 })();
